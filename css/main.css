@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Oi&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Oi display", system-ui;
+    color: #e0e0e0;
+    overflow-x: hidden;
+}
+
+a { text-decoration: none; }
+
+
+.wrapper {
+    background: linear-gradient(90deg, rgb(0, 0, 0) 6%, rgb(46, 46, 46) 39%);
+    width: 100%;
+    min-height: 100vh; 
+}
+
+.container {
+    max-width: 1400px;
+    width: 90%; 
+    margin: 0 auto;
+}
+
+
+header {
+    padding: 20px 0; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    text-transform: uppercase;
+    font-size: clamp(24px, 2vw, 36px); 
+    font-weight: 800;
+    margin-bottom: 30px; 
+    letter-spacing: 5px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li a {
+    color: #fdfbfb;
+    font-size: clamp(16px, 1.2vw, 24px); 
+    letter-spacing: 5px;
+}
+
+
+.hero {
+    height: 100vh;           
+    display: flex;           
+    justify-content: flex-end; 
+    align-items: flex-start;  
+    padding-bottom: 40px;    
+    box-sizing: border-box;
+}
+
+
+.hero--info {
+    display: flex;
+    align-items: center;     
+    justify-content: space-between; 
+    gap: 60px;               
+    width: 100%;             
+    max-width: 1200px;      
+}
+
+.text-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1;                
+}
+
+h1 {
+    font-size: clamp(80px, 5vw, 120px); 
+    font-weight: 800;
+    line-height: 0.8;
+    margin: 0;             
+}
+
+.btn {
+    background-color: #3f0000;
+    color: rgb(68, 0, 0);
+    border: none;
+    padding: 15px 30px;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 500ms ease;
+    border-radius: 50px;
+    margin-top: 25px;       
+    align-self: flex-start; 
+    
+    font-size: clamp(14px, 1.5vw, 20px); 
+}
+
+.btn:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+    background-color: #8b0000;
+    color: #ffffff;
+}
+
+img.bottom-image {
+    width: clamp(300px, 35vw, 500px); 
+    height: auto;
+    object-fit: cover;
+    border-radius: 20px;
+    flex-shrink: 0;        
+}
+
+
+@media (max-width: 768px) {
+    .hero--info {
+        flex-direction: column; 
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        padding-top: 20px;
+    }
+    
+    img.bottom-image {
+        width: 100%;        
+        max-width: 320px;   
+    }
+    
+    h1 {
+        font-size: 60px;    
+    }
+    
+    header .logo {
+        font-size: 24px;
+    }
+}
